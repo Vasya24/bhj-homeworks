@@ -81,13 +81,28 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
+      const points = Array.from(document.querySelectorAll('option'))
+
     return [
       {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
-  }
+        text: points[0].innerHTML,
+        value: points[0].value
+      },
+      {
+        text: points[1].innerHTML,
+        value: points[1].value
+      },
+      {
+        text: points[2].innerHTML,
+        value: points[2].value
+      },
+      {
+        text: points[3].innerHTML,
+        value: points[3].value
+      },
+];
+
+}
 }
 
 new Autocomplete( document.querySelector( '.autocomplete' ));
